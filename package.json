@@ -1,0 +1,9 @@
+{
+  "name": "matam",
+  "version": "1.0.0",
+  "description": "mahjong tamgoo",
+  "main": "index.js",
+  "repository": "https://github.com/jake920220/matam",
+  "author": "Lino Kim",
+  "license": "MIT"
+}
