@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const WorkboxPlugin = require("workbox-webpack-plugin");
 
 const rules = [
     {
@@ -45,7 +46,12 @@ module.exports = {
     module: { rules },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, "src", "index.html"),
+            template: path.resolve(__dirname, "public", "index.html"),
+        }),
+        new WorkboxPlugin.GenerateSW({
+            clientsClaim: true,
+            skipWaiting: true,
+            maximumFileSizeToCacheInBytes: 10 * 1024 * 1024,
         }),
     ],
 };
