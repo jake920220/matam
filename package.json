@@ -8,11 +8,12 @@
   "license": "MIT",
   "scripts": {
     "dev": "webpack serve --mode development --open --hot --progress --config webpack.dev.js",
-    "build": "webpack --config webpack.prod.js"
+    "build": "webpack --config webpack.prod.js --progress"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.10.0"
   },
   "devDependencies": {
     "@babel/core": "^7.21.4",
@@ -21,13 +22,17 @@
     "@babel/preset-typescript": "^7.21.4",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.1",
+    "@types/styled-components": "^5.1.26",
     "babel-loader": "^9.1.2",
+    "babel-plugin-styled-components": "^2.1.1",
     "html-webpack-plugin": "^5.5.1",
+    "styled-components": "^5.3.10",
     "ts-loader": "^9.4.2",
     "typescript": "^5.0.4",
     "webpack": "^5.80.0",
     "webpack-cli": "^5.0.2",
     "webpack-dev-server": "^4.13.3",
-    "webpack-merge": "^5.8.0"
+    "webpack-merge": "^5.8.0",
+    "workbox-webpack-plugin": "^6.5.4"
   }
 }
