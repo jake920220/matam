@@ -2,16 +2,19 @@ import React from "react";
 
 import { Navigate, Outlet } from "react-router-dom";
 
-//todo Kakao login 추가한다면 여기서 처리
+import Header from "../components/layouts/Header";
+import Footer from "../components/layouts/Footer";
+
+//todo Kakao login 추가한다면 여기서 redirect 처리
 const Root = () => {
     return (
-        <div>
-            <div>header</div>
-            <div>
+        <>
+            <Header />
+            <div id="contentWrap">
                 <Outlet />
             </div>
-            <div>footer</div>
-        </div>
+            <Footer />
+        </>
     );
 };
 
