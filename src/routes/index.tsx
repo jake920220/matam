@@ -12,14 +12,16 @@ const route = (): JSX.Element => {
             path: "/",
             element: <Root />,
             errorElement: <ErrorPage />,
-        },
-        {
-            path: "calculator",
-            element: <Calculator />,
-        },
-        {
-            path: "scanner",
-            element: <Scanner />,
+            children: [
+                {
+                    path: "calculator",
+                    element: <Calculator />,
+                },
+                {
+                    path: "scanner",
+                    element: <Scanner />,
+                },
+            ],
         },
     ]);
 
