@@ -4,7 +4,7 @@ const Calculator = () => {
     console.log("calculator page");
     return (
         <div>
-            <h1>Calculator</h1>
+            <h2>Page C</h2>
         </div>
     );
 };

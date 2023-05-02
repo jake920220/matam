@@ -4,7 +4,7 @@ const Scanner = () => {
     console.log("scanner page");
     return (
         <div>
-            <h2>Scanner</h2>
+            <h2>Page S</h2>
         </div>
     );
 };
