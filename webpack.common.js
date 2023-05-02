@@ -33,6 +33,7 @@ const rules = [
 module.exports = {
     entry: {
         app: path.join(__dirname, "src", "index.tsx"),
+        // app: "./src/index.ts",
     },
     output: {
         filename: "[name].bundle.js",
@@ -40,7 +41,7 @@ module.exports = {
         clean: true,
     },
     resolve: {
-        extensions: [".ts", ".tsx", ".js", ".jsx"],
+        extensions: [".tsx", ".ts", ".jsx", ".js", "..."],
     },
     module: { rules },
     plugins: [

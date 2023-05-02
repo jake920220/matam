@@ -1,0 +1,69 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn
+
+PATH: 
+  /Users/junhyunkim/Library/Android/sdk/platform-tools:/Users/junhyunkim/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/junhyunkim/Desktop/Blog/matam/node_modules/.bin:/Users/junhyunkim/Library/Application Support/JetBrains/Toolbox/scripts
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.15.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: aborted
+      at connResetException (node:internal/errors:717:14)
+      at TLSSocket.socketCloseListener (node:_http_client:462:19)
+      at TLSSocket.emit (node:events:525:35)
+      at node:net:322:12
+      at TCP.done (node:_tls_wrap:588:7)
+
+npm manifest: 
+  {
+    "name": "matam",
+    "version": "1.0.0",
+    "description": "mahjong tamgoo",
+    "main": "index.js",
+    "repository": "https://github.com/jake920220/matam",
+    "author": "Lino Kim",
+    "license": "MIT",
+    "scripts": {
+      "dev": "webpack serve --mode development --open --hot --progress --config webpack.dev.js",
+      "build": "webpack --config webpack.prod.js --progress"
+    },
+    "dependencies": {
+      "react": "^18.2.0",
+      "react-dom": "^18.2.0",
+      "react-router-dom": "^6.11.0",
+      "styled-reset": "^4.4.6"
+    },
+    "devDependencies": {
+      "@babel/core": "^7.21.4",
+      "@babel/preset-env": "^7.21.4",
+      "@babel/preset-react": "^7.18.6",
+      "@babel/preset-typescript": "^7.21.4",
+      "@types/react": "^18.2.0",
+      "@types/react-dom": "^18.2.1",
+      "@types/styled-components": "^5.1.26",
+      "babel-loader": "^9.1.2",
+      "babel-plugin-styled-components": "^2.1.1",
+      "html-webpack-plugin": "^5.5.1",
+      "styled-components": "^5.3.10",
+      "ts-loader": "^9.4.2",
+      "typescript": "^5.0.4",
+      "webpack": "^5.80.0",
+      "webpack-cli": "^5.0.2",
+      "webpack-dev-server": "^4.13.3",
+      "webpack-merge": "^5.8.0",
+      "workbox-webpack-plugin": "^6.5.4"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
