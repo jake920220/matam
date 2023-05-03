@@ -5,6 +5,11 @@ interface ROUTE {
 }
 
 export const ROUTES: { [key: string]: ROUTE } = {
+    INTRO: {
+        pathname: "/",
+        path: "/",
+        name: "인트로",
+    },
     CALCULATOR: {
         pathname: "/calculator",
         path: "calculator",
