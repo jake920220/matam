@@ -3,7 +3,6 @@ import reset from "styled-reset";
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
-  @import url(https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
   
   *, *::before, *::after {
     box-sizing: border-box;
@@ -25,13 +24,9 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
   }
   
-  #headerWrap, #footerWrap {
-    position: fixed;
-    z-index: 20;
-  }
-  
-  #footerWrap {
-    
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 `;
 
