@@ -24,19 +24,19 @@ const route = (): JSX.Element => {
                     element: <Intro />,
                 },
                 {
-                    path: ROUTES.CALCULATOR,
+                    path: ROUTES.CALCULATOR.path,
                     element: <Calculator />,
                 },
                 {
-                    path: ROUTES.SCANNER,
+                    path: ROUTES.SCANNER.path,
                     element: <Scanner />,
                 },
                 {
-                    path: ROUTES.COMMUNITY,
+                    path: ROUTES.COMMUNITY.path,
                     element: <Community />,
                 },
                 {
-                    path: ROUTES.FOR_NO_INDICATOR,
+                    path: ROUTES.FOR_NO_INDICATOR.path,
                     element: <NoIndicator />,
                 },
             ],

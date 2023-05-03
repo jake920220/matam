@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 
@@ -21,13 +21,14 @@ const Footer = () => {
             <NavTabList>
                 <li
                     className={
-                        location.pathname === `/${ROUTES.CALCULATOR}`
+                        location.pathname === `${ROUTES.CALCULATOR.pathname}`
                             ? "active"
                             : ""
                     }
                 >
                     <Link to={ROUTES.CALCULATOR}>
-                        {location.pathname === `/${ROUTES.CALCULATOR}` ? (
+                        {location.pathname ===
+                        `${ROUTES.CALCULATOR.pathname}` ? (
                             <CalculateIcon />
                         ) : (
                             <CalculateOutlinedIcon />
@@ -38,13 +39,13 @@ const Footer = () => {
                 </li>
                 <li
                     className={
-                        location.pathname === `/${ROUTES.SCANNER}`
+                        location.pathname === `${ROUTES.SCANNER.pathname}`
                             ? "active"
                             : ""
                     }
                 >
                     <Link to={ROUTES.SCANNER}>
-                        {location.pathname === `/${ROUTES.SCANNER}` ? (
+                        {location.pathname === `${ROUTES.SCANNER.pathname}` ? (
                             <CenterFocusStrongIcon />
                         ) : (
                             <CenterFocusStrongOutlinedIcon />
@@ -55,13 +56,15 @@ const Footer = () => {
                 </li>
                 <li
                     className={
-                        location.pathname === `/${ROUTES.FOR_NO_INDICATOR}`
+                        location.pathname ===
+                        `${ROUTES.FOR_NO_INDICATOR.pathname}`
                             ? "active"
                             : ""
                     }
                 >
                     <Link to={ROUTES.FOR_NO_INDICATOR}>
-                        {location.pathname === `/${ROUTES.FOR_NO_INDICATOR}` ? (
+                        {location.pathname ===
+                        `${ROUTES.FOR_NO_INDICATOR.pathname}` ? (
                             <EditIcon />
                         ) : (
                             <EditOutlinedIcon />
@@ -72,13 +75,14 @@ const Footer = () => {
                 </li>
                 <li
                     className={
-                        location.pathname === `/${ROUTES.COMMUNITY}`
+                        location.pathname === `${ROUTES.COMMUNITY.pathname}`
                             ? "active"
                             : ""
                     }
                 >
                     <Link to={ROUTES.COMMUNITY}>
-                        {location.pathname === `/${ROUTES.COMMUNITY}` ? (
+                        {location.pathname ===
+                        `${ROUTES.COMMUNITY.pathname}` ? (
                             <ForumIcon />
                         ) : (
                             <ForumOutlinedIcon />
@@ -98,6 +102,7 @@ const FooterNavContainer = styled.div`
     z-index: 20;
     bottom: 0;
     width: 100%;
+    height: 56px;
     padding-bottom: env(safe-area-inset-bottom);
     border-top: 1px solid #eee;
 `;
@@ -110,7 +115,6 @@ const NavTabList = styled.ul`
     margin: 0 auto;
     width: 100%;
     max-width: 620px;
-    height: 56px;
 
     li {
         cursor: pointer;
@@ -129,11 +133,17 @@ const NavTabList = styled.ul`
         span {
             font-size: 13px;
             margin-top: 4px;
+            user-select: none;
+            transform: scale(0.92);
+            transition: transform 0.2s ease-in-out;
         }
 
         &.active {
             opacity: 1;
             pointer-events: none;
+            span {
+                transform: scale(1);
+            }
         }
     }
 `;

@@ -24,6 +24,19 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
   }
   
+  #contentWrap {
+    padding-top: 48px;
+    padding-bottom: calc(env(safe-area-inset-bottom) + 56px);
+  }
+  
+  button {
+    cursor: pointer;
+    background: none;
+    border: 0;
+    outline: 0;
+    padding: 0;
+  }
+  
   a {
     text-decoration: none;
     color: inherit;
