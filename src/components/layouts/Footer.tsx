@@ -133,6 +133,7 @@ const NavTabList = styled.ul`
 
         &.active {
             opacity: 1;
+            pointer-events: none;
         }
     }
 `;
