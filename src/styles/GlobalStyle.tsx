@@ -24,11 +24,6 @@ const GlobalStyle = createGlobalStyle`
     position: relative;
   }
   
-  #contentWrap {
-    padding-top: 48px;
-    padding-bottom: calc(env(safe-area-inset-bottom) + 56px);
-  }
-  
   button {
     cursor: pointer;
     background: none;

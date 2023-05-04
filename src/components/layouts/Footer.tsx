@@ -26,7 +26,7 @@ const Footer = () => {
                             : ""
                     }
                 >
-                    <Link to={ROUTES.CALCULATOR}>
+                    <Link to={ROUTES.CALCULATOR.path}>
                         {location.pathname ===
                         `${ROUTES.CALCULATOR.pathname}` ? (
                             <CalculateIcon />
@@ -44,7 +44,7 @@ const Footer = () => {
                             : ""
                     }
                 >
-                    <Link to={ROUTES.SCANNER}>
+                    <Link to={ROUTES.SCANNER.path}>
                         {location.pathname === `${ROUTES.SCANNER.pathname}` ? (
                             <CenterFocusStrongIcon />
                         ) : (
@@ -62,7 +62,7 @@ const Footer = () => {
                             : ""
                     }
                 >
-                    <Link to={ROUTES.FOR_NO_INDICATOR}>
+                    <Link to={ROUTES.FOR_NO_INDICATOR.path}>
                         {location.pathname ===
                         `${ROUTES.FOR_NO_INDICATOR.pathname}` ? (
                             <EditIcon />
@@ -80,7 +80,7 @@ const Footer = () => {
                             : ""
                     }
                 >
-                    <Link to={ROUTES.COMMUNITY}>
+                    <Link to={ROUTES.COMMUNITY.path}>
                         {location.pathname ===
                         `${ROUTES.COMMUNITY.pathname}` ? (
                             <ForumIcon />
@@ -97,6 +97,7 @@ const Footer = () => {
 };
 
 const FooterNavContainer = styled.div`
+    background-color: ${(props) => props.theme.bgColor};
     min-width: 320px;
     position: fixed;
     z-index: 20;

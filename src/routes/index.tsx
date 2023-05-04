@@ -4,6 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Root from "./Root";
 import Intro from "./Intro";
 import Calculator from "./Calculator";
+import CalcIntro from "./CalcIntro";
+import CalcSimple from "./CalcSimple";
+import CalcComplex from "./CalcComplex";
 import Scanner from "./Scanner";
 import ErrorPage from "./Error";
 import Login from "./Login";
@@ -26,6 +29,20 @@ const route = (): JSX.Element => {
                 {
                     path: ROUTES.CALCULATOR.path,
                     element: <Calculator />,
+                    children: [
+                        {
+                            index: true,
+                            element: <CalcIntro />,
+                        },
+                        {
+                            path: ROUTES.CALC_SIMPLE.path,
+                            element: <CalcSimple />,
+                        },
+                        {
+                            path: ROUTES.CALC_COMPLEX.path,
+                            element: <CalcComplex />,
+                        },
+                    ],
                 },
                 {
                     path: ROUTES.SCANNER.path,

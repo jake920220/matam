@@ -2,23 +2,16 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { Link, useLocation } from "react-router-dom";
 
-import { ROUTES } from "../../constants";
+import { ROUTES, HEADER_TITLE_ENUM } from "../../constants";
 
 import Drawer from "./Drawer";
 import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import { Simulate } from "react-dom/test-utils";
-import toggle = Simulate.toggle;
+// import DarkModeSwitch from "../common/DarkModeSwitch";
 
 const Header = () => {
     const location = useLocation();
     const [drawerOpen, setDrawerOpen] = useState(false);
-
-    const returnRouteName = (): string => {
-        const something = Object.keys(ROUTES).filter((route) => {
-            return ROUTES[route].pathname === location.pathname;
-        });
-        return ROUTES[something[0]].name;
-    };
 
     const toggleDrawer =
         (drawerOpen: boolean) =>
@@ -43,7 +36,7 @@ const Header = () => {
                 </button>
             </DrawerBtnWrap>
 
-            <HeaderTitle>{returnRouteName()}</HeaderTitle>
+            <HeaderTitle>{HEADER_TITLE_ENUM[location.pathname]}</HeaderTitle>
 
             <Drawer toggleDrawer={toggleDrawer} drawerOpen={drawerOpen} />
         </HeaderNavContainer>
@@ -51,6 +44,7 @@ const Header = () => {
 };
 
 const HeaderNavContainer = styled.div`
+    background-color: ${(props) => props.theme.bgColor};
     min-width: 320px;
     position: fixed;
     z-index: 20;

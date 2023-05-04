@@ -7,7 +7,7 @@ import route from "./routes";
 
 const App = (): JSX.Element => {
     return (
-        <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme["light"]}>
             <GlobalStyle />
             {route()}
         </ThemeProvider>
