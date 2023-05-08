@@ -22,6 +22,7 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.0",
     "styled-reset": "^4.4.6",
+    "tesseract.js": "^4.0.5",
     "yarn": "^1.22.19"
   },
   "devDependencies": {
