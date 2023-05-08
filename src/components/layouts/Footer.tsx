@@ -21,7 +21,7 @@ const Footer = () => {
             <NavTabList>
                 <li
                     className={
-                        location.pathname === `${ROUTES.CALCULATOR.pathname}`
+                        location.pathname.includes(ROUTES.CALCULATOR.pathname)
                             ? "active"
                             : ""
                     }

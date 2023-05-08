@@ -40,11 +40,11 @@ const calcUnderMankan = ({
             point += item;
         });
 
-        calculatedPoint = ceil(point).toString();
+        calculatedPoint = ceilUp(point).toString();
     } else {
         calculatedPoint = isHead
-            ? `${ceil(total[0])} ALL`
-            : `${ceil(total[0])} / ${ceil(total[2])}`;
+            ? `${ceilUp(total[0])} ALL`
+            : `${ceilUp(total[0])} / ${ceilUp(total[2])}`;
     }
     return calculatedPoint;
 };
@@ -79,8 +79,10 @@ const calcAboveMankan = ({ pan, isHead, isRon }: CalcProps): string => {
     return calculatedPoint;
 };
 
-const ceil = (num: number): number => {
-    return Math.ceil(num);
+const ceilUp = (num: number): number => {
+    return Math.ceil(num / 100) * 100;
 };
 
-export { calcUnderMankan, calcAboveMankan };
+const calcPanBusu = () => {};
+
+export { calcUnderMankan, calcAboveMankan, calcPanBusu };
