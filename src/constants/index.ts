@@ -31,6 +31,19 @@ export const PAN_GRADE: { [key: number]: Roles } = {
     13: { head: 48000, child: 36000 },
 };
 
+export const ERROR_EMOJIS: string[] = [
+    "😇",
+    "😭",
+    "🥲",
+    "🥹",
+    "🧐",
+    "😨",
+    "😥",
+    "🤔",
+    "😑",
+    "😵‍💫",
+];
+
 export const ROUTES: { [key: string]: ROUTE } = {
     INTRO: {
         pathname: "/",
